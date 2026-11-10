@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>오늘의 할 일</h1>
+      <p id="date-display" class="date-display"></p>
+    </header>
+
+    <form id="todo-form" class="todo-form">
+      <input
+        type="text"
+        id="todo-input"
+        class="todo-input"
+        placeholder="할 일을 입력하고 Enter를 누르세요..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="add-btn">추가</button>
+    </form>
+
+    <div class="filter-bar">
+      <div class="filters">
+        <button type="button" class="filter-btn active" data-filter="all">전체</button>
+        <button type="button" class="filter-btn" data-filter="active">진행 중</button>
+        <button type="button" class="filter-btn" data-filter="completed">완료됨</button>
+      </div>
+      <span id="todo-count" class="todo-count">남은 할 일 0개</span>
+    </div>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <div id="empty-state" class="empty-state">
+      <p>아직 등록된 할 일이 없습니다. 새로운 할 일을 추가해보세요!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
